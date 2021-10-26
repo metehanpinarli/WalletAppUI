@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wirecash/widget/cutom_widget.dart';
+import 'package:wirecash/widget/custom_widget.dart';
 class WeekView extends StatefulWidget {
   const WeekView({Key? key}) : super(key: key);
 
@@ -10,6 +10,6 @@ class WeekView extends StatefulWidget {
 class _WeekViewState extends State<WeekView> {
   @override
   Widget build(BuildContext context) {
-    return customList(image: "asset/image/CarlsJr.png", title: "Carls JR:", subtitle: "1 Hours Ago", trailing: "+\$85");
+    return CustomList(image: "asset/image/CarlsJr.png", title: "Carls JR:", subtitle: "1 Hours Ago", trailing: "+\$85");
   }
 }

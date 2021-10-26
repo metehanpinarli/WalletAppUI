@@ -17,7 +17,7 @@ class _TransferViewState extends State<TransferView> {
           foregroundColor: Colors.black,
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: Text(
+          title: const Text(
             "Transfer",
             style: TextStyle(color: Colors.black),
           ),
@@ -27,7 +27,7 @@ class _TransferViewState extends State<TransferView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Your Contacts"),
+              const Text("Your Contacts"),
               Expanded(
                 child: ListView.builder(
                   itemCount: 5,
@@ -48,9 +48,9 @@ class _TransferViewState extends State<TransferView> {
                               CircleAvatar(
                                 radius:context.mediumValue,
                                 backgroundColor: Colors.white,
-                                backgroundImage: AssetImage("asset/image/profile.jpg"),
+                                backgroundImage: const AssetImage("asset/image/profile.jpg"),
                               ),
-                              Text("Josie Maran"),
+                             const Text("Josie Maran"),
                             ],
                           ),
                         ),
@@ -59,7 +59,7 @@ class _TransferViewState extends State<TransferView> {
                   },
                 ),
               ),
-              Spacer(flex: 4),
+              const Spacer(flex: 4),
             ],
           ),
         ),

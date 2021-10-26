@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wirecash/widget/custom_widget.dart';
 
 class Crypto extends StatefulWidget {
   const Crypto({Key? key}) : super(key: key);
@@ -10,20 +11,6 @@ class Crypto extends StatefulWidget {
 class _CryptoState extends State<Crypto> {
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      scrollDirection: Axis.vertical,
-      itemCount: 3,
-      padding: EdgeInsets.only(top:10),
-      itemBuilder: (BuildContext context, int index) {
-        return ListTile(
-          leading:CircleAvatar(
-            backgroundColor: Colors.transparent,
-            backgroundImage:AssetImage('asset/image/btc.png'),
-          ),
-          title:Text("Bitcoin",style:TextStyle(color:Colors.black,fontWeight: FontWeight.w600),),
-          subtitle: Text("150.12 BTC"),
-        );
-      },
-    );
+    return CustomWalletList(image: "asset/image/ethereum.png", title: "Ethereum", subtitle: "125.29 ETH");
   }
 }

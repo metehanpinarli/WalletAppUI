@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kartal/kartal.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:wirecash/view/wallet/tabbar_items/all.dart';
 import 'package:wirecash/view/wallet/tabbar_items/crypto.dart';
 import 'package:wirecash/view/wallet/tabbar_items/fiat.dart';
@@ -20,11 +20,11 @@ class _WalletViewState extends State<WalletView> {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: Text("Wallet", style: TextStyle(color: Colors.black)),
+          title: const Text("Wallet", style: TextStyle(color: Colors.black)),
           actions: [
             IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.settings,
                 color: Colors.black,
               ),
@@ -33,28 +33,36 @@ class _WalletViewState extends State<WalletView> {
         ),
         body: Column(
           children: [
-            TabBar(
-                labelStyle: context.textTheme.headline6,
-                unselectedLabelStyle: context.textTheme.headline6,
-                indicatorSize: TabBarIndicatorSize.label,
-                labelColor: Colors.black,
-                unselectedLabelColor: Colors.black,
-                indicatorColor: Colors.blue,
-                tabs: [
-                  Tab(text: "ALL"),
-                  Tab(text: "FIAT"),
-                  Tab(text: "CRYPTO"),
-                ]),
+            buildTabBar(context),
             Expanded(
-              child: TabBarView(children: [
-                All(),
-                Fiat(),
-                Crypto(),
-              ]),
+              child: buildTabBarView(),
             ),
           ],
         ),
       ),
     );
+  }
+
+  TabBar buildTabBar(BuildContext context) {
+    return TabBar(
+        labelStyle: GoogleFonts.prompt(letterSpacing: 1, fontWeight: FontWeight.w500),
+        unselectedLabelStyle: GoogleFonts.prompt(letterSpacing: 1, fontWeight: FontWeight.w500),
+        indicatorSize: TabBarIndicatorSize.label,
+        labelColor: Colors.black54,
+        unselectedLabelColor: Colors.black54,
+        indicatorColor: Colors.blue,
+        tabs: const [
+          Tab(text: "ALL"),
+          Tab(text: "FIAT"),
+          Tab(text: "CRYPTO"),
+        ]);
+  }
+
+  TabBarView buildTabBarView() {
+    return const TabBarView(children: [
+      All(),
+      Fiat(),
+      Crypto(),
+    ]);
   }
 }

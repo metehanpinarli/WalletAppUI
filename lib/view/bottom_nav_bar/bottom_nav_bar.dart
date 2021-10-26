@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kartal/kartal.dart';
 import 'package:wirecash/view/activitylog/activitylog_view.dart';
 import 'package:wirecash/view/home/home_view.dart';
 import 'package:wirecash/view/wallet/wallet_view.dart';
@@ -12,7 +11,7 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-    List pageList = [WalletView(), HomeView(), ActivityLogView()];
+    List pageList = [const WalletView(),const HomeView(),const ActivityLogView()];
 
   int selectedPage = 1;
 
@@ -30,7 +29,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               selectedPage=page;
             });
           },
-          items: [
+          items: const [
             BottomNavigationBarItem(icon: Icon(Icons.account_balance_wallet), label: "Wallet"),
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(icon: Icon(Icons.list), label: "Activity"),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wirecash/widget/cutom_widget.dart';
+import 'package:wirecash/widget/custom_widget.dart';
 class MonthView extends StatefulWidget {
   const MonthView({Key? key}) : super(key: key);
 
@@ -10,6 +10,6 @@ class MonthView extends StatefulWidget {
 class _MonthViewState extends State<MonthView> {
   @override
   Widget build(BuildContext context) {
-    return  customList(image: "asset/image/getir.png", title: "Getir", subtitle: "19 Hours Ago", trailing: "-\$35");
+    return  CustomList(image: "asset/image/getir.png", title: "Getir", subtitle: "19 Hours Ago", trailing: "-\$35");
   }
 }
