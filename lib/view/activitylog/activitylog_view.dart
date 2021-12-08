@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart  ';
-import 'package:wirecash/widget/custom_widget.dart';
+import 'package:wirecash/widget/custom_tabbar.dart';
 import 'activitylog_items/day_view.dart';
 import 'activitylog_items/month_view.dart';
 import 'activitylog_items/week_view.dart';

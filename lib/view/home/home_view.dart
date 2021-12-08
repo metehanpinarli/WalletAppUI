@@ -6,7 +6,8 @@ import 'package:wirecash/view/home/transactions_items/month_view.dart';
 import 'package:wirecash/view/home/transactions_items/week_view.dart';
 import 'package:wirecash/view/home/transactions_items/year_view.dart';
 import 'package:wirecash/view/transfer/transfer_view.dart';
-import 'package:wirecash/widget/custom_widget.dart';
+import 'package:wirecash/widget/custom_card.dart';
+import 'package:wirecash/widget/custom_tabbar.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);

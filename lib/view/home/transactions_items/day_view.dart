@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wirecash/widget/custom_widget.dart';
+import 'package:wirecash/widget/custom_list.dart';
 
 class DayView extends StatefulWidget {
   const DayView({Key? key}) : super(key: key);

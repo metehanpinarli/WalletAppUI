@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wirecash/widget/custom_widget.dart';
+import 'package:wirecash/widget/custom_wallet_list.dart';
+
 
 class All extends StatefulWidget {
   const All({Key? key}) : super(key: key);
